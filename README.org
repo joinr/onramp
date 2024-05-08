@@ -1,0 +1,97 @@
+* Onramp
+
+A clojure project for newcomers to use to learn the language.
+The "curriculum" is focused around an initial training introduction,
+designed to be performed interactively at the clojure REPL:
+
+- src/onramp/crawling.clj
+  (exposure to clojure language concepts and evaluation model)
+  
+- src/onramp/walking.clj
+  (exposure to clojure data structures, functional programming, and
+   more practical idioms)
+
+The remaining files are intended to provide a puzzle-driven
+practical learning environment.  They draw from https://projecteuler.net/
+and some other puzzzles I have found useful for learning.
+
+Additionally, I recommend trying to solve https://adventofcode.com/
+problems, since they also provide a calibrated challenge and an
+applied problem to express newfound language skills against.
+
+** Usage
+
+This repository is meant to be cloned by the user (alternately
+you could just grab the files individually if you are not familiar
+with the git version control system).
+
+Assuming you have access to git and this repository, then
+
+#+BEGIN_SRC bash
+  git clone https://github.com/joinr/onramp.git
+#+END_SRC
+
+will clone the repository into ./onramp .
+
+From there you can move into the onramp directory and launch a repl. This
+project supports both the established https://leiningen.org/ for project
+management, and the newer (but in my opinion less "easy" but perhaps "simpler")
+official clojure CLI https://clojure.org/guides/install_clojure . For newcomers
+and this repository, either will work fine.
+
+Assuming you have lein installed, and its prerequisites installed (either a
+Java Runtime Environment, or a Java Development Kit), you should be able to
+launch a clojure REPL relative to the project:
+
+#+BEGIN_SRC bash
+  cd onramp
+  lein repl
+#+END_SRC
+
+Similarly for the clojure cli:
+#+BEGIN_SRC bash
+  cd onramp
+  clj
+#+END_SRC
+
+The tutorials (crawling.clj and walking.clj) are meant be used in a
+copy/paste fashion with no requirements other than a REPL.  So a new
+user can launch a REPL, open the file, and start following the
+tutorial by copying code into the REPL and evaluating it (hitting `enter`).
+This is hopefully as simplistic a workflow as we can make it, with the
+aim of getting the user "conversing" with the REPL to learn the language.
+
+Alternately, if you are using an Integrated Development Environment like
+
+- Emacs + Cider https://docs.cider.mx/cider/index.html
+- VSCode + Calva https://calva.io/
+- Intellij + Cursive https://cursive-ide.com/
+- Vim + vim-clojure
+
+or any other https://clojure.org/guides/editors , you probably
+have access to excellent REPL connectivity from your IDE.  Specifically,
+you are often able to evaluate code directly in the source file and see
+the result inline; or highlight code to "send" to the repl on your
+behalf.
+
+I highly recommend at least some syntax highlighting capability (and ideally
+parenthesis balancing), but it's not strictly necessary for the tutorials. You
+can get by with a text editor and a REPL connection.  I used to recommend / use
+NightCode due to its simplicity and provision of the above features.  The project
+is not actively developed and in archival mode, but you can get the last release from:
+
+https://github.com/oakes/Nightcode/releases
+
+
+** License
+
+This program and the accompanying materials are made available under the
+terms of the Eclipse Public License 2.0 which is available at
+http://www.eclipse.org/legal/epl-2.0.
+
+This Source Code may also be made available under the following Secondary
+Licenses when the conditions for such availability set forth in the Eclipse
+Public License, v. 2.0 are satisfied: GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or (at your
+option) any later version, with the GNU Classpath Exception which is available
+at https://www.gnu.org/software/classpath/license.html.

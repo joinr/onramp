@@ -1,0 +1,2 @@
+;;alternative for clojure cli users.
+{:deps {org.clojure/clojure {:mvn/version "1.11.3"}}}

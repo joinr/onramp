@@ -1,23 +1,36 @@
 * Onramp
 
-A clojure project for newcomers to use to learn the language.
-The "curriculum" is focused around an initial training introduction,
-designed to be performed interactively at the clojure REPL:
+A clojure project for newcomers to use to learn the language. The "curriculum"
+is focused around an initial training introduction, designed to be performed
+interactively at the clojure REPL:
 
 - src/onramp/crawling.clj
   (exposure to clojure language concepts and evaluation model)
-  
+
 - src/onramp/walking.clj
   (exposure to clojure data structures, functional programming, and
    more practical idioms)
 
-The remaining files are intended to provide a puzzle-driven
-practical learning environment.  They draw from https://projecteuler.net/
-and some other puzzzles I have found useful for learning.
+The remaining files are intended to provide a puzzle-driven practical learning
+environment. They draw from https://projecteuler.net/ and some other puzzzles I
+have found useful for learning.
 
-Additionally, I recommend trying to solve https://adventofcode.com/
-problems, since they also provide a calibrated challenge and an
-applied problem to express newfound language skills against.
+For convenience, I included any required inputs in the project root. Users
+should be able to just
+
+#+BEGIN_SRC clojure
+(slurp "some-filename.txt")
+#+END_SRC
+
+where input files are mentioned.
+
+Additionally, I recommend trying to solve https://adventofcode.com/ problems,
+since they also provide a calibrated challenge and an applied problem to express
+newfound language skills against.
+
+I strongly recommend keeping a link/copy of the
+https://clojure.org/api/cheatsheet handy as you go forward learning the
+language.
 
 ** Usage
 
@@ -54,12 +67,12 @@ Similarly for the clojure cli:
   clj
 #+END_SRC
 
-The tutorials (crawling.clj and walking.clj) are meant be used in a
-copy/paste fashion with no requirements other than a REPL.  So a new
-user can launch a REPL, open the file, and start following the
-tutorial by copying code into the REPL and evaluating it (hitting `enter`).
-This is hopefully as simplistic a workflow as we can make it, with the
-aim of getting the user "conversing" with the REPL to learn the language.
+The tutorials (crawling.clj and walking.clj) are meant be used in a copy/paste
+fashion with no requirements other than a REPL. So a new user can launch a REPL,
+open the file, and start following the tutorial by copying code into the REPL
+and evaluating it (hitting `enter`). This is hopefully as simplistic a workflow
+as we can make it, with the aim of getting the user "conversing" with the REPL
+to learn the language.
 
 Alternately, if you are using an Integrated Development Environment like
 
@@ -81,6 +94,54 @@ NightCode due to its simplicity and provision of the above features.  The projec
 is not actively developed and in archival mode, but you can get the last release from:
 
 https://github.com/oakes/Nightcode/releases
+
+
+*** Teachers
+I recommend helping folks go through the crawling/walking REPL workflow first, even
+if they have some proficiency in other languages already.  They aren't too long,
+and hopefully get the learner over the initial syntax hump.
+
+When working through puzzles, the intent is to stimulate an iterative approach to
+problem solving (more specificall, "expressing" solutions in clojure with emergent
+vocabulary).  Ideally the student is not in isolation, but instead trying to
+apply basic vocabularly with the help of the teacher.  I have found pair programming,
+or frequent code reviews, to be helpful in this endeavor.  As the student builds
+more sophisticated solutions (maybe overly complex or non-idiomatic, but "working"),
+the teacher can interject to highlight library functions or more idiomatic representations,
+leading to a refactor (and additional learning...).
+
+*** Students
+This is probably going to be weird for a bit, since you might be tackling two
+"new" things at once: a different language (with its own unique syntax and semantics),
+and a different default programming paradigm (functional programming).  Technically,
+the syntax is actually pretty minimal compared to other languages, but it will
+still present a hurdle just because it is likely "different".  Everything passes
+with time though, so the more mileage you get the better you will acclimate.
+
+It is important to get mileage in the syntax (hence the intentional copy/pasting
+with the REPL), and to gain exposure to the concepts. Then when presented with a
+problem (e.g. one of the puzzles), you can try to express pieces of a solution
+"in clojure".
+
+I suggest trying "not" to write language-x-in-clojure. That is, bringing idioms
+and habits (namely mutation and statefulness) or even directly porting
+solutions. When in Rome be Roman. When in Clojure, try to use the tools (and
+even constraints) in front of you. Most importantly, ask your teacher/mentor for
+help frequently.
+
+This should not feel like an exercise in "stumping the chump" or a permanent
+regression or humbling ritual. After working with several people of various
+ages, academic backgrounds, and programming experience (to include a middle
+schooler), I find that the initial awkwardness inexorably gives way to a change
+in perspective. It will happen, just keep trying. Thousands have done it, and
+as the quote by Sylvanus Phillips Thompson goes:
+
+#+BEGIN_QUOTE
+Being myself a remarkably stupid fellow, I have had to unteach myself the
+difficulties, and now beg to present to my fellow fools the parts that are not
+hard. Master these thoroughly, and the rest will follow. What one fool can do,
+another can.
+#+END_QUOTE
 
 
 ** License
